@@ -1,0 +1,36 @@
+name:                  projector-html-runtime-compat
+version:               0.1
+license:               BSD3
+author:                (c) 2017 Ambiata
+                       (c) 2018 Tim Humphries
+category:              Web
+build-type:            Simple
+cabal-version:         >= 1.10
+
+synopsis:
+  Hydrant HTML runtime for the Projector templating language (compat)
+description:
+  Hydrant HTML runtime for the Projector templating language.
+  .
+  This is the original Ambiata Hydrant runtime, cleaned up for public
+  use and to prevent bitrot in dependent projects.
+  .
+  It expects hydrant-compat, the equivalent Hydrant release.
+
+library
+  build-depends:
+                       base                            >= 3          && < 5
+                     , hydrant-compat                  == 0.1.*
+                     , text                            == 1.2.*
+                     , bytestring                      >= 0.10.2     && < 0.11
+
+  ghc-options:
+                       -Wall
+
+  hs-source-dirs:
+                       src
+
+  exposed-modules:
+                       Projector.Html.Runtime
+                       Projector.Html.Runtime.Library
+                       Projector.Html.Runtime.Prim
