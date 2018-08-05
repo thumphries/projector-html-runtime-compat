@@ -1,0 +1,3 @@
+[submodule "lib/hydrant-compat"]
+	path = lib/hydrant-compat
+	url = git@github.com:thumphries/hydrant-compat
